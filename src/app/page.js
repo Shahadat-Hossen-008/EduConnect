@@ -1,7 +1,12 @@
-import Image from "next/image";
+
+import Banner from "./HomeComponents/Banner";
+import CollegeCard from "./CollegeComponents/CollegeCard";
 
 export default function Home() {
   return (
-    <h1>Helleo world</h1>
+    <>
+    <Banner/>
+    <CollegeCard/>
+    </>
   );
 }
