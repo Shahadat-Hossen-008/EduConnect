@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function CollegeCard() {
@@ -41,14 +42,14 @@ console.log(collegeList);
               {college.collegeName}
             </h3>
             <p className="text-sm text-green-600 mb-2">
-              Admissions open: {college.admissionDates || 'Not specified'}
+              Admissions open: {college.admissionDates?.start || 'Not specified'} to {college?.admissionDates?.end}
             </p>
             <p className="text-gray-600 mb-4">
               {college.description.slice(0,200)}...
             </p>
-            <button className="btn btn-primary w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition-colors duration-300">
+            <Link href={`colleges/${college._id}`}><button className="btn btn-primary w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition-colors duration-300">
               View Details
-            </button>
+            </button></Link>
           </div>
         </div>
       )})}

@@ -21,9 +21,9 @@ export default function Navbar() {
   );
   return (
     <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
-      <div className="w-11/12 mx-auto">
+      <div className="w-11/12 mx-auto flex justify-between items-center">
         <div className="navbar-start">
-          <div className="flex items-center">
+          <div className="flex items-center justify-center">
             <Image
               src="/asset/logo.jpg"
               alt="Logo"
